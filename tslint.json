@@ -1,0 +1,21 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "rules": {
+    "no-shadowed-variable": false,
+    "member-access": false,
+    "object-literal-sort-keys": [false],
+    "no-console": [false],
+    "ordered-imports": [
+      false,
+      {
+        "grouped-imports": true,
+        "named-imports-order": "any"
+      }
+    ],
+    "jsx-no-lambda": false
+  },
+  "linterOptions": {
+    "exclude": ["node_modules/**/*.ts", "coverage/**/*.js"]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "multilogger",
+  "version": "2.0.0",
+  "description": "Multifunctional logger",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prettier": "prettier --write 'lib/**/*.{ts,js,json}'",
+    "tslint": "tslint -p . -c tslint.json ./lib/*.ts",
+    "version": "auto-changelog -p --template changelog.hbs"
+  },
+  "engines": {
+    "node": ">=10.16.0"
+  },
+  "keywords": [
+    "multilogger",
+    "logger",
+    "log"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaorlov/multilogger"
+  },
+  "author": "Andrey Orlov <andrey.orlov.od@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "auto-changelog": "^2.2.1",
+    "prettier": "^2.1.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

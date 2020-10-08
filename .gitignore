@@ -2,7 +2,7 @@ node_modules
 coverage
 test-report.xml
 report-lint.json
-dist
+build
 .idea
 DS_Store
 .vscode

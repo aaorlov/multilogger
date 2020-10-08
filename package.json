@@ -1,18 +1,22 @@
 {
   "name": "multilogger",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Multifunctional logger",
   "main": "build/index.js",
-  "types": "build/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "npm-run-all -s clean tsc",
     "prettier": "prettier --write 'lib/**/*.{ts,js,json}'",
-    "tslint": "tslint -p . -c tslint.json ./lib/*.ts",
-    "version": "auto-changelog -p --template changelog.hbs"
+    "tslint": "tslint -p . -c tslint.json",
+    "tslint:ci": "npm run tslint -- -t json -o report-lint.json",
+    "tslint:fix": "npm run tslint -- --fix",
+    "clean": "npm-run-all -p clean:*",
+    "clean:dist": "rimraf buid",
+    "tsc": "tsc"
   },
   "engines": {
-    "node": ">=10.16.0"
+    "node": "~12.16.3"
   },
+  "engineStrict": true,
   "keywords": [
     "multilogger",
     "logger",
@@ -25,12 +29,18 @@
   "author": "Andrey Orlov <andrey.orlov.od@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "auto-changelog": "^2.2.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@types/node": "^14.11.5",
+    "i": "^0.3.6",
+    "npm": "^6.14.8"
   }
 }

@@ -1,7 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ANSI = exports.COLORS = void 0;
-const Stylizer_1 = require("./stylizer/Stylizer");
-Object.defineProperty(exports, "COLORS", { enumerable: true, get: function () { return Stylizer_1.COLORS; } });
-Object.defineProperty(exports, "ANSI", { enumerable: true, get: function () { return Stylizer_1.ANSI; } });
-console.log(Stylizer_1.COLORS[0]);
+exports.stylizer = void 0;
+const Stylizer_1 = __importDefault(require("./stylizer/Stylizer"));
+exports.stylizer = Stylizer_1.default;
+//# sourceMappingURL=index.js.map

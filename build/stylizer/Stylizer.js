@@ -99,13 +99,10 @@ const stylizer = (strings, ...values) => {
 stylizer.b = stylizer('b');
 stylizer.i = stylizer('i');
 stylizer.u = stylizer('u');
-stylizer.em = stylizer('b');
 stylizer.error = stylizer('b,red');
 stylizer.info = stylizer('b,green');
 stylizer.warn = stylizer('b,yellow');
 stylizer.debug = stylizer('b,blue');
-stylizer.success = stylizer.info;
-stylizer.fail = stylizer.error;
 stylizer.red = stylizer('red');
 stylizer.green = stylizer('green');
 stylizer.yellow = stylizer('yellow');
